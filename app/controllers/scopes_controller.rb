@@ -1,5 +1,5 @@
 class ScopesController < ApplicationController
   def index
-    render plain: "Hello!"
+    send_file File.join(Rails.root, "public/michigan/chapter_001.xml")
   end
 end
