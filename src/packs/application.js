@@ -16,12 +16,22 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-const Hello = props => (
-  <Book>
-    <Page>Hello {props.name}!</Page>
-    <Page>Hello {props.name}!</Page>
-  </Book>
-)
+class Handbook extends React.Component {
+  state = { scope: '' }
+
+  componentDidMount() {
+    fetch("/scope")
+    .then(response => response.text())
+    .then(response => this.setState({ scope: response }))
+  }
+
+  render = () => (
+    <Book>
+      <Page>Hello you!</Page>
+      <Page>{this.state.scope}</Page>
+    </Book>
+  )
+}
 
 const Book = styled.div`
 height: 80vh;
@@ -41,7 +51,7 @@ font-family: sans-serif;
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="you" />,
+    <Handbook />,
     document.body.appendChild(document.createElement('div')),
   )
 })
