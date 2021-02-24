@@ -44,7 +44,7 @@ margin: 4rem auto;
 var Page = styled.div`
 padding: 2rem;
 width: 40%;
-background: bisque;
+background: cornsilk;
 box-shadow: 0 0 24px grey;
 font-family: sans-serif;
 `
