@@ -34,8 +34,8 @@ class Handbook extends React.Component {
 }
 
 const Book = styled.div`
-height: 80vh;
-width: 60vw;
+height: 40rem;
+width: 60rem;
 display: flex;
 justify-content: space-between;
 margin: 4rem auto;
