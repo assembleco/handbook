@@ -17,15 +17,24 @@ Turbolinks.start()
 ActiveStorage.start()
 
 const Hello = props => (
-  <Page>Hello {props.name}!</Page>
+  <Book>
+    <Page>Hello {props.name}!</Page>
+    <Page>Hello {props.name}!</Page>
+  </Book>
 )
 
-var Page = styled.div`
-background: bisque;
+const Book = styled.div`
 height: 80vh;
 width: 60vw;
+display: flex;
+justify-content: space-between;
 margin: 4rem auto;
+`
+
+var Page = styled.div`
 padding: 2rem;
+width: 40%;
+background: bisque;
 box-shadow: 0 0 24px grey;
 font-family: sans-serif;
 `
